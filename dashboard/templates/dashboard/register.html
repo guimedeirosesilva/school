@@ -1,0 +1,15 @@
+{% extends "dashboard/layout.html" %}
+
+{% block content %}
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+    
+    <form class="forms" action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button class="btn btn-primary" type="submit">Create User</button>
+    </form>
+
+{% endblock %}
