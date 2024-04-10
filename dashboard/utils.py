@@ -1,6 +1,8 @@
 from django import forms
 
 
+# ----------------------- CUSTOM FORMS -------------------------
+
 # login form
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -25,6 +27,7 @@ class LoginForm(forms.Form):
     )
 
 
+# register form
 class RegisterForm(forms.Form):
     username = forms.CharField(
         label="",
@@ -67,3 +70,26 @@ class RegisterForm(forms.Form):
             }
         )
     )
+
+
+
+# ----------------------- CUSTOM FUNCTIONS -------------------------
+
+
+
+
+
+# ----------------------- CUSTOM EXCEPTIONS -------------------------
+
+class EmptyClass(Exception):
+    pass
+
+
+class InvalidLearners(Exception):
+    pass
+
+class EmptyPayer(Exception):
+    pass
+
+class MultiplePayers(Exception):
+    pass
